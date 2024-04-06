@@ -25,7 +25,7 @@ class TestLogin(unittest.TestCase):
         print("quithou")
         time.sleep(5)
         print("sys")
-    @parameterized.expand(get_data("../data/login.txt"))
+    @parameterized.expand(get_data("data/login.txt"))
     def test_login(self, username, password, verify_code, success, expect):
         self.login.page_login(username, password, verify_code)
         if success == "True":
@@ -47,5 +47,5 @@ class TestLogin(unittest.TestCase):
                 self.login.page_click_login_fail_info_button()
 
 
-
-
+if __name__=="__main__":
+    aa = 0
